@@ -1,0 +1,48 @@
+{
+	"services": {
+		"@type": "grassroots_service",
+		"so:name": "BASE Web Search service",
+		"so:description": "An operation to obtain matching articles from the Bielefield Academic Search Engine",
+		"so:url": "https://www.base-search.net/about/en/index.php",
+		"plugin": "web_search_service",
+    "category": {
+      "application_category": {
+        "so:sameAs": "eo:operation_0305",
+        "so:name": "Literature search",
+        "so:description": "Query scientific literature, in search for articles, article data, concepts, named entities, or for statistics."
+      },
+      "input": [
+        {
+          "so:sameAs": "eo:data_0968",
+          "so:name": "Keyword",
+          "so:description": "Keyword(s) or phrase(s) used (typically) for text-searching purposes."
+        }
+      ],
+      "output": [
+        {
+          "so:sameAs": "eo:data_2080",
+          "so:name": "Database search results",
+          "so:description": "A report of hits from searching a database of some type."
+        }
+      ]
+    },
+		"operation": {
+			"so:url": "https://www.base-search.net/Search/Results?type=all&oaboost=1&ling=1&name=&newsearch=1&refid=dcbasen",
+			"method": "GET",
+			"link_selector": ".Results h2 a",
+			"title_selector": ".Results h2 a",
+			"parameter_set": {
+				"parameters": [{
+					"param": "lookfor",
+					"so:name": "Query",
+					"default_value": "",
+					"current_value": "",
+					"type": "string",
+					"grassroots_type": "xsd:string",
+					"so:description": "The search term"
+				}]
+			}
+		}
+	}
+}
+

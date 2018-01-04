@@ -1,0 +1,47 @@
+{
+	"services": {
+		"@type": "grassroots_service",
+		"so:name": "Agris Search service",
+		"so:description": "A service to obtain articles using search terms",
+		"so:url": "http://agris.fao.org/agris-search/searchIndex.do",
+		"plugin": "web_search_service",
+    "category": {
+      "application_category": {
+        "so:sameAs": "eo:operation_0305",
+        "so:name": "Literature search",
+        "so:description": "Query scientific literature, in search for articles, article data, concepts, named entities, or for statistics."
+      },
+      "input": [
+        {
+          "so:sameAs": "eo:data_0968",
+          "so:name": "Keyword",
+          "so:description": "Keyword(s) or phrase(s) used (typically) for text-searching purposes."
+        }
+      ],
+      "output": [
+        {
+          "so:sameAs": "eo:data_2080",
+          "so:name": "Database search results",
+          "so:description": "A report of hits from searching a database of some type."
+        }
+      ]
+    },
+		"operation": {
+			"so:url": "http://agris.fao.org/agris-search/searchIndex.do",
+			"method": "GET",
+			"link_selector": "div.result-item h3 a",
+			"title_selector": "div.result-item h3 a strong",
+			"parameter_set": {
+				"parameters": [{
+					"param": "query",
+					"so:name": "Query",
+					"default_value": "",
+					"current_value": "",
+					"type": "string",
+					"grassroots_type": "xsd:string",
+					"so:description": "The search term"
+				}]
+			}
+		}
+	}
+}
