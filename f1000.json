@@ -1,7 +1,7 @@
 {
 	"services": {
 		"@type": "grassroots_service",
-		"so:name": "f1000 research search",
+		"so:name": "f1000 research Search service",
 		"so:description": "A service to search for academic articles available at f1000",
 		"so:url": "http://f1000research.com/",
 		"plugin": "web_search_service",
