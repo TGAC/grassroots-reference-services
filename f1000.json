@@ -38,7 +38,7 @@
 					"default_value": "",
 					"current_value": "",
 					"type": "string",
-					"grassroots_type": "xsd:string",
+					"grassroots_type": "params:keyword",
 					"so:description": "The search term"
 				}]
 			}
