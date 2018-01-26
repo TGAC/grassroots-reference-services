@@ -10,4 +10,5 @@ all:
 clean: 
 
 install:
+	mkdir -p $(DIR_INSTALL)
 	cp $(DIR_REFERENCES)/*.json $(DIR_INSTALL)/
