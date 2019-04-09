@@ -1,7 +1,7 @@
 {
 	"services": {
 		"@type": "grassroots_service",
-		"so:name": "BASE Web Search service",
+		"so:name": "Search BASE",
 		"so:description": "An operation to obtain matching articles from the Bielefield Academic Search Engine",
 		"so:url": "https://www.base-search.net/about/en/index.php",
 		"plugin": "web_search_service",
